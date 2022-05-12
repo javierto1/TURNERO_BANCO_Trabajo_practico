@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<link rel="icon" type="image/png" href="images/cajas/bank-building.ico" />
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>Listado Turnos</title>
+
+
+<!-- HOJAS DE ESTILO-->
+<link href="../css/table.css" rel="stylesheet">
+<!-- JS--> <!-- referenciamos al archivo ajax.js donde se encuentra nuestra funcion objetoAjax-->
+<script language="JavaScript" type="text/javascript" src="ajax_pantalla.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+ $(document).ready(function() {
+ 	 $("#resultado").load("consulta.php");
+   var refreshId = setInterval(function() {
+      $("#resultado").load('consulta.php?');
+   }, 3000);
+   $.ajaxSetup({ cache: false });
+});
+</script>
+
+<div id="capa"></div>
+
+</head>
+
+<body>
+<!-- En "onsubmit" escribimos la función 'MostrarConsulta' que creamos en javascript, 
+con su parametro que es el archivo que vamos a mostrar, en este caso 'consulta.php'-->
+
+<form name="consulta" action="" onsubmit="MostrarConsulta('consulta.php'); return false">
+<label>
+
+</label>
+</form>
+<table border="2" id="resultado" style="../css/table.css" class="CSS_Table_Example" align="center"> </table>
+
+
+</body>
+
+</html>

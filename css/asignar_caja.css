@@ -1,0 +1,17 @@
+#content {
+width: 250px;
+}
+
+#close {
+
+}
+
+#respuesta {
+margin: 0px auto;
+min-height: 100px;
+width: 450px;
+box-shadow: 0 2px 5px #14C49B;
+padding: 10px;
+font-weight: bold;
+color: #14C49B;
+}
